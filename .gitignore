@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.production.example
+# зависимости и сборка
+node_modules/
+dist/
+.next/
+.wrangler/
+*.tsbuildinfo
+# логи и мусор ОС
+*.log
+.DS_Store
+Thumbs.db

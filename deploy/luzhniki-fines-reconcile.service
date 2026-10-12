@@ -1,0 +1,17 @@
+[Unit]
+Description=Reconcile paid Luzhniki fines into Building 50
+After=network-online.target luzhniki-fines.service
+Requires=luzhniki-fines.service
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/luzhniki-oplata-shtrafov/shtrafiParkovrf
+EnvironmentFile=/opt/luzhniki-oplata-shtrafov/shtrafiParkovrf/.env
+ExecStart=/usr/bin/node scripts/run-paid-reconciliation.mjs
+TimeoutStartSec=60
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true

@@ -1,0 +1,65 @@
+.page { min-height: 100vh; background: #f7f7f5; color: #151515; padding-bottom: 90px; }
+.header, .intro, .generatorCard, .resultCard, .twoColumns, .history, .notice { width: min(1220px, calc(100% - 64px)); margin-inline: auto; }
+.header { min-height: 104px; display: flex; align-items: center; justify-content: space-between; gap: 28px; border-bottom: 1px solid #dcdcd8; }
+.header img { display: block; width: 245px; height: auto; }
+.headerRight { display: flex; align-items: center; gap: 24px; color: #666; font-size: 12px; }
+.headerRight a { color: #ef3340; text-underline-offset: 4px; }
+.demoBadge { padding: 9px 11px; border: 1px solid #ef3340; color: #ef3340; font-family: "ALS Trigger", Arial, sans-serif; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.intro { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(360px, .75fr); align-items: end; gap: 70px; padding: 76px 0 54px; }
+.eyebrow, .sectionHeading p { margin: 0 0 14px; color: #ef3340; font-family: "ALS Trigger", Arial, sans-serif; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.intro h1 { margin: 0; font-family: "ALS Trigger", Arial, sans-serif; font-size: clamp(54px, 7vw, 90px); font-weight: 900; letter-spacing: -.055em; line-height: .88; }
+.intro h1 span { color: #ef3340; }
+.introText > p { margin: 0 0 28px; color: #666; font-size: 15px; line-height: 1.65; }
+.introText dl { display: grid; grid-template-columns: 1fr 1fr; margin: 0; border-top: 1px solid #dcdcd8; }
+.introText dl div { padding: 18px 16px 0 0; }
+.introText dt { margin-bottom: 7px; color: #8a8a86; font-family: "ALS Trigger", Arial, sans-serif; font-size: 8px; letter-spacing: .12em; text-transform: uppercase; }
+.introText dd { margin: 0; font-size: 13px; overflow-wrap: anywhere; }
+.notice { margin-bottom: 18px; padding: 15px 18px; border-left: 4px solid #187248; background: #e9f5ed; color: #145c3b; font-size: 13px; }
+.noticeError { border-color: #ef3340; background: #fff0f1; color: #b91825; }
+.generatorCard, .resultCard, .panel, .history { border: 1px solid #deded9; background: #fff; }
+.generatorCard { padding: 34px; border-top: 5px solid #ef3340; box-shadow: 0 20px 60px rgba(21,21,21,.06); }
+.sectionHeading { display: flex; align-items: start; gap: 18px; }
+.sectionHeading > span { display: grid; flex: 0 0 34px; height: 34px; place-items: center; background: #ef3340; color: #fff; font-family: Arial, sans-serif; font-size: 11px; }
+.sectionHeading p { margin-bottom: 5px; }
+.sectionHeading h2 { margin: 0; font-family: "ALS Trigger", Arial, sans-serif; font-size: 27px; letter-spacing: -.03em; }
+.generatorForm { display: grid; grid-template-columns: 1.2fr 1.2fr .55fr auto; align-items: end; gap: 16px; margin-top: 30px; }
+.generatorForm label, .tenantForm label, .testField { display: grid; gap: 9px; color: #595955; font-family: "ALS Trigger", Arial, sans-serif; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.generatorForm input, .generatorForm select, .tenantForm input, .tenantForm select, .testField input { width: 100%; height: 56px; padding: 0 15px; border: 1px solid #c9c9c4; border-radius: 0; background: #fff; color: #151515; font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+.generatorForm input:focus, .generatorForm select:focus, .tenantForm input:focus, .tenantForm select:focus, .testField input:focus { border-color: #ef3340; box-shadow: 0 0 0 4px rgba(239,51,64,.08); outline: none; }
+.generatorForm small { min-height: 14px; color: #969691; font-family: Arial, sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.generatorForm button, .tenantForm button, .testActions button, .exportButton { display: inline-flex; min-height: 56px; align-items: center; justify-content: space-between; gap: 24px; padding: 0 22px; border: 1px solid #ef3340; border-radius: 0; background: #ef3340; color: #fff; cursor: pointer; font-family: "ALS Trigger", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .02em; text-decoration: none; text-transform: uppercase; transition: background 150ms ease, transform 150ms ease; }
+.generatorForm button:hover:not(:disabled), .tenantForm button:hover:not(:disabled), .testActions button:hover:not(:disabled), .exportButton:hover { background: #cf1e2b; transform: translateY(-1px); }
+.generatorForm button:disabled, .tenantForm button:disabled, .testActions button:disabled { cursor: not-allowed; opacity: .45; }
+.resultCard { margin-top: 22px; padding: 34px; }
+.resultSummary { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
+.resultSummary h2 { margin: 5px 0 8px; font-family: "ALS Trigger", Arial, sans-serif; font-size: 36px; letter-spacing: -.04em; }
+.resultSummary > div > p:last-child { margin: 0; color: #74746f; font-size: 13px; }
+.exportButton { min-width: 200px; }
+.codeTableWrap { overflow-x: auto; }
+.codeTable { width: 100%; border-collapse: collapse; font-size: 12px; }
+.codeTable th, .codeTable td { padding: 14px 12px; border-bottom: 1px solid #e5e5e1; text-align: left; vertical-align: middle; }
+.codeTable th { color: #858580; font-family: "ALS Trigger", Arial, sans-serif; font-size: 8px; letter-spacing: .11em; text-transform: uppercase; }
+.codeTable code { color: #151515; font-family: Consolas, monospace; font-size: 15px; font-weight: 700; }
+.codeTable button { padding: 0; border: 0; border-bottom: 1px solid #ef3340; background: transparent; color: #ef3340; cursor: pointer; font-size: 11px; }
+.statusNew, .statusUsed { display: inline-block; padding: 7px 9px; border: 1px solid currentColor; color: #187248; font-family: "ALS Trigger", Arial, sans-serif; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
+.statusUsed { color: #8a641d; }
+.tableNote { margin: 18px 0 0; color: #777772; font-size: 11px; }
+.twoColumns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; }
+.panel { padding: 30px; }
+.panelLead { margin: 22px 0; color: #71716c; font-size: 13px; line-height: 1.55; }
+.testField input { font-family: Consolas, monospace; font-size: 18px; letter-spacing: .04em; text-transform: uppercase; }
+.testActions { display: flex; gap: 10px; margin-top: 14px; }
+.testActions button { min-height: 46px; }
+.testActions button + button { background: #fff; color: #ef3340; }
+.testResult, .testResultError { margin: 18px 0 0; padding: 14px; background: #e9f5ed; color: #145c3b; font-size: 12px; line-height: 1.5; }
+.testResultError { background: #fff0f1; color: #b91825; }
+.panel > summary { display: flex; align-items: start; justify-content: space-between; gap: 20px; list-style: none; cursor: pointer; }
+.panel > summary::-webkit-details-marker { display: none; }
+.panel > summary > b { color: #ef3340; font-family: Arial, sans-serif; font-size: 30px; font-weight: 400; }
+.panel[open] > summary > b { transform: rotate(45deg); }
+.tenantForm { display: grid; gap: 15px; margin-top: 28px; padding-top: 24px; border-top: 1px solid #e2e2de; }
+.tenantForm button { justify-self: start; min-height: 48px; }
+.history { margin-top: 22px; padding: 34px; }
+.history .sectionHeading { margin-bottom: 25px; }
+@media (max-width: 930px) { .intro { grid-template-columns: 1fr; gap: 34px; } .generatorForm { grid-template-columns: 1fr 1fr; } .twoColumns { grid-template-columns: 1fr; } }
+@media (max-width: 680px) { .header, .intro, .generatorCard, .resultCard, .twoColumns, .history, .notice { width: min(100% - 28px, 1220px); } .header { min-height: 76px; } .header img { width: 180px; } .headerRight a { display: none; } .intro { padding: 48px 0 36px; } .intro h1 { font-size: 52px; } .introText dl { grid-template-columns: 1fr; } .generatorCard, .resultCard, .panel, .history { padding: 22px 18px; } .generatorForm { grid-template-columns: 1fr; } .resultSummary { align-items: stretch; flex-direction: column; } .exportButton { width: 100%; } .testActions { flex-direction: column; } .testActions button { width: 100%; } }

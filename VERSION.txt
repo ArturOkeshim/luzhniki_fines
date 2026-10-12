@@ -1,0 +1,21 @@
+LUZHNIKI-FINES-SERVER-V54.2-FULL
+Version: 54.2.0
+Date: 2026-10-12
+Full installation package. Not an in-place update.
+Exact website source tested locally at http://127.0.0.1:4196/.
+Production catalog allowlist: 4651, 4652, 4653, 4750
+Receipt name: current non-empty Bitrix catalog product name
+VAT: active Bitrix rate 22%, included in price
+Payment subject: service from catalog
+Payment system: ID 24
+Buyer: email, phone and FIO persisted and read back before payment creation
+Payment deal: routed to category 43, stage C43:NEW
+Payment return: immediate site confirmation after PAID=Y
+Reconciliation: browser retries plus private server timer every minute
+CRM transition: successful stage first; Bitrix robot moves the card to paid funnel
+Fallback: direct Bitrix REST when VibeCode is temporarily unavailable
+Suppressed customer email: adminluzh@luzhniki.ru
+Private .env with working credentials is included.
+Contact handling: direct Bitrix CRM create/update with identity read-back
+Deal contact: explicit primary contact assignment with read-back verification
+Payment gate: payment URL is not returned until the deal contact is verified
