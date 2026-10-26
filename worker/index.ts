@@ -12,6 +12,7 @@ import {
   evidenceDisposition,
   evidenceResponseHeaders,
   evidenceSource,
+  evidenceDownloadName,
 } from "../app/lib/evidence-source";
 import { sniffImageStream } from "../app/lib/image-stream";
 import { type FineAccessToken, verifyToken } from "../app/lib/tokens";
@@ -110,12 +111,17 @@ async function evidenceResponse(request: Request): Promise<Response> {
       });
     }
 
+    const downloadName = evidenceDownloadName(
+      file.name,
+      upstream.headers.get("content-disposition") ?? "",
+      upstreamType,
+    );
     return new Response(upstream.body, {
       status: upstream.status,
       headers: evidenceResponseHeaders(
         upstream,
         fallbackType,
-        evidenceDisposition(file.name, "download"),
+        evidenceDisposition(downloadName, "download"),
       ),
     });
   } catch (error) {
